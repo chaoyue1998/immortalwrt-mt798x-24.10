@@ -16,6 +16,11 @@ on:
   repository_dispatch:
   workflow_dispatch:
 
+# 允许 GITHUB_TOKEN 创建/删除 Release，并清理历史 workflow run。
+permissions:
+  contents: write
+  actions: write
+
 env:
   REPO_URL: https://github.com/padavanonly/immortalwrt-mt798x-24.10
   REPO_BRANCH: openwrt-24.10-6.6
